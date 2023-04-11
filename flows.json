@@ -1,0 +1,858 @@
+[
+    {
+        "id": "992579733deef552",
+        "type": "tab",
+        "label": "OPENDATA",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "27a0f42b5200e41e",
+        "type": "inject",
+        "z": "992579733deef552",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "5340",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 140,
+        "wires": [
+            [
+                "0fa0f348a9b973c5",
+                "afa68fa4a608be52",
+                "c3ba4ab8e81e9b9f",
+                "5937fd2a64dab858"
+            ]
+        ]
+    },
+    {
+        "id": "0fa0f348a9b973c5",
+        "type": "http request",
+        "z": "992579733deef552",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://opendata.gijon.es/descargar.php?id=1&tipo=JSON",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 410,
+        "y": 140,
+        "wires": [
+            [
+                "7b3203f17e2d5401"
+            ]
+        ]
+    },
+    {
+        "id": "8babfb0ae43cefb8",
+        "type": "debug",
+        "z": "992579733deef552",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1020,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "7b3203f17e2d5401",
+        "type": "json",
+        "z": "992579733deef552",
+        "name": "VALORES",
+        "property": "payload",
+        "action": "",
+        "pretty": true,
+        "x": 610,
+        "y": 140,
+        "wires": [
+            [
+                "8babfb0ae43cefb8"
+            ]
+        ]
+    },
+    {
+        "id": "afa68fa4a608be52",
+        "type": "http request",
+        "z": "992579733deef552",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://opendata.gijon.es/descargar.php?id=5&tipo=JSON",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 410,
+        "y": 200,
+        "wires": [
+            [
+                "f83336db998b580c"
+            ]
+        ]
+    },
+    {
+        "id": "f83336db998b580c",
+        "type": "json",
+        "z": "992579733deef552",
+        "name": "PARAMETROS",
+        "property": "payload",
+        "action": "",
+        "pretty": true,
+        "x": 620,
+        "y": 200,
+        "wires": [
+            [
+                "b50efabe5a5593cf",
+                "1b74c5660d6947f7"
+            ]
+        ]
+    },
+    {
+        "id": "b50efabe5a5593cf",
+        "type": "debug",
+        "z": "992579733deef552",
+        "name": "debug 2",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1020,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "214fda4173f5966a",
+        "type": "function",
+        "z": "992579733deef552",
+        "name": "function 1",
+        "func": "var Item={payload:msg.payload.estaciones};\n\nreturn [Item];",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 780,
+        "y": 1820,
+        "wires": [
+            [
+                "5e9b35033091f710"
+            ]
+        ]
+    },
+    {
+        "id": "c3ba4ab8e81e9b9f",
+        "type": "debug",
+        "z": "992579733deef552",
+        "name": "debug 9",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 400,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "5937fd2a64dab858",
+        "type": "http request",
+        "z": "992579733deef552",
+        "name": "",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": "ignore",
+        "url": "https://opendata.gijon.es/descargar.php?id=4&tipo=JSON",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 410,
+        "y": 260,
+        "wires": [
+            [
+                "0e90dc1e493db702"
+            ]
+        ]
+    },
+    {
+        "id": "0e90dc1e493db702",
+        "type": "json",
+        "z": "992579733deef552",
+        "name": "ESTACIONES",
+        "property": "payload",
+        "action": "",
+        "pretty": true,
+        "x": 620,
+        "y": 260,
+        "wires": [
+            [
+                "ccf3a52f6a1d9e95",
+                "214fda4173f5966a"
+            ]
+        ]
+    },
+    {
+        "id": "ccf3a52f6a1d9e95",
+        "type": "debug",
+        "z": "992579733deef552",
+        "name": "debug 10",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1020,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "2a1e570f014a3a29",
+        "type": "debug",
+        "z": "992579733deef552",
+        "name": "Station 0",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1160,
+        "y": 1680,
+        "wires": []
+    },
+    {
+        "id": "5e9b35033091f710",
+        "type": "function",
+        "z": "992579733deef552",
+        "name": "ESTACIONES",
+        "func": "var ID0={payload:msg.payload.estacion[0]};\nvar ID1 = { payload: msg.payload.estacion[1] };\nvar ID2 = { payload: msg.payload.estacion[2] };\nvar ID3 = { payload: msg.payload.estacion[3] };\nvar ID4 = { payload: msg.payload.estacion[4] };\nvar ID5 = { payload: msg.payload.estacion[5] };\nvar ID6 = { payload: msg.payload.estacion[6] };\nvar ID7 = { payload: msg.payload.estacion[7] };\n\nreturn [ID0,ID1,ID2,ID3,ID4,ID5,ID6,ID7];",
+        "outputs": 8,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 960,
+        "y": 1820,
+        "wires": [
+            [
+                "2a1e570f014a3a29"
+            ],
+            [
+                "4855287b7d96150e"
+            ],
+            [
+                "180edaada3a88a6b"
+            ],
+            [
+                "ea62f1b851cc304a"
+            ],
+            [
+                "abf3e0728311e930"
+            ],
+            [
+                "83a7228baa341cd0"
+            ],
+            [
+                "df86cc9a8a736ee1"
+            ],
+            [
+                "0cf4ab6bcccc069b"
+            ]
+        ]
+    },
+    {
+        "id": "4855287b7d96150e",
+        "type": "debug",
+        "z": "992579733deef552",
+        "name": "Station 1",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1160,
+        "y": 1720,
+        "wires": []
+    },
+    {
+        "id": "180edaada3a88a6b",
+        "type": "debug",
+        "z": "992579733deef552",
+        "name": "Station 2",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1160,
+        "y": 1760,
+        "wires": []
+    },
+    {
+        "id": "ea62f1b851cc304a",
+        "type": "debug",
+        "z": "992579733deef552",
+        "name": "Station 3",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1160,
+        "y": 1800,
+        "wires": []
+    },
+    {
+        "id": "abf3e0728311e930",
+        "type": "debug",
+        "z": "992579733deef552",
+        "name": "Station 4",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1160,
+        "y": 1840,
+        "wires": []
+    },
+    {
+        "id": "83a7228baa341cd0",
+        "type": "debug",
+        "z": "992579733deef552",
+        "name": "Station 5",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1160,
+        "y": 1880,
+        "wires": []
+    },
+    {
+        "id": "df86cc9a8a736ee1",
+        "type": "debug",
+        "z": "992579733deef552",
+        "name": "Staton 6",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1160,
+        "y": 1920,
+        "wires": []
+    },
+    {
+        "id": "0cf4ab6bcccc069b",
+        "type": "debug",
+        "z": "992579733deef552",
+        "name": "Station 7",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1160,
+        "y": 1960,
+        "wires": []
+    },
+    {
+        "id": "1b74c5660d6947f7",
+        "type": "function",
+        "z": "992579733deef552",
+        "name": "function 3",
+        "func": "var param={payload:msg.payload.parametroestaciones};\nreturn [param];",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 780,
+        "y": 1260,
+        "wires": [
+            [
+                "23d32feae4bd7c39"
+            ]
+        ]
+    },
+    {
+        "id": "23d32feae4bd7c39",
+        "type": "function",
+        "z": "992579733deef552",
+        "name": "function 4",
+        "func": "var param_0={payload:msg.payload.parametroestacion[0]};\nvar param_1 = { payload: msg.payload.parametroestacion[1] };\n//var param1 = {payload: msg.payload.parametroestacion};\nvar param_2 = { payload: msg.payload.parametroestacion[2] };\nvar param_3 = { payload: msg.payload.parametroestacion[3] };\nvar param_4 = { payload: msg.payload.parametroestacion[4] };\nvar param_5 = { payload: msg.payload.parametroestacion[5] };\nvar param_6 = { payload: msg.payload.parametroestacion[6] };\nvar param_7 = { payload: msg.payload.parametroestacion[7] };\nvar param_8 = { payload: msg.payload.parametroestacion[8] };\nvar param_9 = { payload: msg.payload.parametroestacion[9] };\nvar param_10 = { payload: msg.payload.parametroestacion[10] };\nvar param_11 = { payload: msg.payload.parametroestacion[11] };\nvar param_12 = { payload: msg.payload.parametroestacion[12] };\nvar param_13 = { payload: msg.payload.parametroestacion[13] };\nvar param_14 = { payload: msg.payload.parametroestacion[14] };\nvar param_15 = { payload: msg.payload.parametroestacion[15] };\nvar param_16 = { payload: msg.payload.parametroestacion[16] };\nvar param_17 = { payload: msg.payload.parametroestacion[17] };\nvar param_18 = { payload: msg.payload.parametroestacion[18] };\nvar param_19 = { payload: msg.payload.parametroestacion[19] };\nvar param_20 = { payload: msg.payload.parametroestacion[20] };\n\n\n\nreturn [param_0,param_1,param_10,param_11,param_12,param_13,param_14,param_15,param_16,param_17,param_18,param_19,param_20,param_2,param_3,param_4,param_5,param_6,param_7,param_8,param_9];",
+        "outputs": 20,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 960,
+        "y": 1260,
+        "wires": [
+            [
+                "fff673d97dab739c"
+            ],
+            [
+                "739d8483137383ea"
+            ],
+            [
+                "82a31fe049058cc2"
+            ],
+            [
+                "faa226c1c9debe27"
+            ],
+            [
+                "452f9df778effe6f"
+            ],
+            [
+                "92712251b57ad4fe"
+            ],
+            [
+                "717d06ad02d4d5a8"
+            ],
+            [
+                "38e19405ece18ce7"
+            ],
+            [
+                "ec44df7e87f344fc"
+            ],
+            [
+                "fcc7c5d3700991c2"
+            ],
+            [
+                "ed8f89631276154e"
+            ],
+            [
+                "e4d4eb2d2aa6d0c0"
+            ],
+            [
+                "e0c81c2456b91b2b"
+            ],
+            [
+                "f2be1edcc8ab42ce"
+            ],
+            [
+                "b8c065544f0b33c7"
+            ],
+            [
+                "4a8ae9f5be701577"
+            ],
+            [
+                "9f7788c6cd7b36e7"
+            ],
+            [
+                "e7ef8e82efa94ba4"
+            ],
+            [
+                "481e0673179e2096"
+            ],
+            [
+                "75e9fde9ab51ded8"
+            ]
+        ]
+    },
+    {
+        "id": "82a31fe049058cc2",
+        "type": "debug",
+        "z": "992579733deef552",
+        "name": "NO2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1150,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "faa226c1c9debe27",
+        "type": "debug",
+        "z": "992579733deef552",
+        "name": "O3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1150,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "452f9df778effe6f",
+        "type": "debug",
+        "z": "992579733deef552",
+        "name": "PM10",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1150,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "717d06ad02d4d5a8",
+        "type": "debug",
+        "z": "992579733deef552",
+        "name": "PM25__1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1160,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "38e19405ece18ce7",
+        "type": "debug",
+        "z": "992579733deef552",
+        "name": "PRB",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1150,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "ed8f89631276154e",
+        "type": "debug",
+        "z": "992579733deef552",
+        "name": "TMP",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1150,
+        "y": 1260,
+        "wires": []
+    },
+    {
+        "id": "e4d4eb2d2aa6d0c0",
+        "type": "debug",
+        "z": "992579733deef552",
+        "name": "TOL",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1150,
+        "y": 1300,
+        "wires": []
+    },
+    {
+        "id": "e0c81c2456b91b2b",
+        "type": "debug",
+        "z": "992579733deef552",
+        "name": "VV",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1150,
+        "y": 1340,
+        "wires": []
+    },
+    {
+        "id": "f2be1edcc8ab42ce",
+        "type": "debug",
+        "z": "992579733deef552",
+        "name": "CO",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1150,
+        "y": 1380,
+        "wires": []
+    },
+    {
+        "id": "b8c065544f0b33c7",
+        "type": "debug",
+        "z": "992579733deef552",
+        "name": "DD",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1150,
+        "y": 1420,
+        "wires": []
+    },
+    {
+        "id": "9f7788c6cd7b36e7",
+        "type": "debug",
+        "z": "992579733deef552",
+        "name": "HR",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1150,
+        "y": 1500,
+        "wires": []
+    },
+    {
+        "id": "481e0673179e2096",
+        "type": "debug",
+        "z": "992579733deef552",
+        "name": "METAPARAXILENO",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1200,
+        "y": 1580,
+        "wires": []
+    },
+    {
+        "id": "fff673d97dab739c",
+        "type": "debug",
+        "z": "992579733deef552",
+        "name": "BEN",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1150,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "739d8483137383ea",
+        "type": "debug",
+        "z": "992579733deef552",
+        "name": "C_BEN",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1160,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "ec44df7e87f344fc",
+        "type": "debug",
+        "z": "992579733deef552",
+        "name": "RS",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1150,
+        "y": 1180,
+        "wires": []
+    },
+    {
+        "id": "fcc7c5d3700991c2",
+        "type": "debug",
+        "z": "992579733deef552",
+        "name": "SO2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1150,
+        "y": 1220,
+        "wires": []
+    },
+    {
+        "id": "92712251b57ad4fe",
+        "type": "debug",
+        "z": "992579733deef552",
+        "name": "PM25",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1150,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "e7ef8e82efa94ba4",
+        "type": "debug",
+        "z": "992579733deef552",
+        "name": "LL_precipitaciones",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1190,
+        "y": 1540,
+        "wires": []
+    },
+    {
+        "id": "4a8ae9f5be701577",
+        "type": "debug",
+        "z": "992579733deef552",
+        "name": "DD",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1150,
+        "y": 1460,
+        "wires": []
+    },
+    {
+        "id": "75e9fde9ab51ded8",
+        "type": "debug",
+        "z": "992579733deef552",
+        "name": "MXileno",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1160,
+        "y": 1620,
+        "wires": []
+    }
+]
