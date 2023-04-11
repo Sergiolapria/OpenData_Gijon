@@ -68,7 +68,7 @@
         "type": "debug",
         "z": "992579733deef552",
         "name": "debug 1",
-        "active": false,
+        "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -451,7 +451,7 @@
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 340,
+        "x": 300,
         "y": 1220,
         "wires": [
             [
@@ -876,18 +876,90 @@
         ]
     },
     {
+        "id": "9d0a4182bd6d088d",
+        "type": "link out",
+        "z": "992579733deef552",
+        "name": "link out 1",
+        "mode": "link",
+        "links": [
+            "d38e7cf9593d9437",
+            "0d39cc8a75bab38d"
+        ],
+        "x": 995,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "30ea1db908e97074",
+        "type": "link out",
+        "z": "992579733deef552",
+        "name": "link out 2",
+        "mode": "link",
+        "links": [
+            "a85b76903d56c458"
+        ],
+        "x": 935,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "a85b76903d56c458",
+        "type": "link in",
+        "z": "992579733deef552",
+        "name": "link in 2",
+        "links": [
+            "30ea1db908e97074"
+        ],
+        "x": 155,
+        "y": 1220,
+        "wires": [
+            [
+                "23d32feae4bd7c39"
+            ]
+        ]
+    },
+    {
+        "id": "0b3647cf902445f5",
+        "type": "link out",
+        "z": "992579733deef552",
+        "name": "link out 3",
+        "mode": "link",
+        "links": [
+            "599a0dd3108dc083"
+        ],
+        "x": 935,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "599a0dd3108dc083",
+        "type": "link in",
+        "z": "992579733deef552",
+        "name": "link in 3",
+        "links": [
+            "0b3647cf902445f5"
+        ],
+        "x": 145,
+        "y": 620,
+        "wires": [
+            [
+                "5e9b35033091f710"
+            ]
+        ]
+    },
+    {
         "id": "5e1ec5f7893e1946",
         "type": "function",
         "z": "992579733deef552",
         "name": "ESTACION1",
-        "func": "var estacion1={payload:msg.payload.calidadairemediatemporal[0]};\nvar name={payload:msg.payload.calidadairemediatemporal[0].título};\nvar latitud = { payload: msg.payload.calidadairemediatemporal[0].latitud };\nvar longitud = { payload: msg.payload.calidadairemediatemporal[0].longitud };\nvar fecha = { payload: msg.payload.calidadairemediatemporal[0].fecha };\nvar periodo = { payload: msg.payload.calidadairemediatemporal[0].periodo };\nvar so2 = { payload: msg.payload.calidadairemediatemporal[0].so2 };\nvar no = { payload: msg.payload.calidadairemediatemporal[0].no };\nvar co = { payload: msg.payload.calidadairemediatemporal[0].co };\nvar pm10 = { payload: msg.payload.calidadairemediatemporal[0].pm10 };\nvar o3 = { payload: msg.payload.calidadairemediatemporal[0].o3 };\nvar dd = { payload: msg.payload.calidadairemediatemporal[0].dd };\nvar tmp = { payload: msg.payload.calidadairemediatemporal[0].tmp };\nvar hr = { payload: msg.payload.calidadairemediatemporal[0].hr };\nvar prb = { payload: msg.payload.calidadairemediatemporal[0].prb };\nvar rs = { payload: msg.payload.calidadairemediatemporal[0].rs };\nvar ll = { payload: msg.payload.calidadairemediatemporal[0].ll };\nvar ben = { payload: msg.payload.calidadairemediatemporal[0].ben };\nvar mxil = { payload: msg.payload.calidadairemediatemporal[0].mxil };\nvar pm25 = { payload: msg.payload.calidadairemediatemporal[0].pm25 };\n\nreturn [estacion1,name,latitud,longitud,fecha,periodo,so2,no,co,pm10,o3,dd,tmp,hr,prb,rs,ll,ben,mxil,pm25];",
+        "func": "var i=0;\nvar estacion1={payload:msg.payload.calidadairemediatemporal[i]};\nvar name={payload:msg.payload.calidadairemediatemporal[i].título};\nvar latitud = { payload: msg.payload.calidadairemediatemporal[i].latitud };\nvar longitud = { payload: msg.payload.calidadairemediatemporal[i].longitud };\nvar fecha = { payload: msg.payload.calidadairemediatemporal[i].fecha };\nvar periodo = { payload: msg.payload.calidadairemediatemporal[i].periodo };\nvar so2 = { payload: msg.payload.calidadairemediatemporal[i].so2 };\nvar no = { payload: msg.payload.calidadairemediatemporal[i].no };\nvar co = { payload: msg.payload.calidadairemediatemporal[i].co };\nvar pm10 = { payload: msg.payload.calidadairemediatemporal[i].pm10 };\nvar o3 = { payload: msg.payload.calidadairemediatemporal[i].o3 };\nvar dd = { payload: msg.payload.calidadairemediatemporal[i].dd };\nvar tmp = { payload: msg.payload.calidadairemediatemporal[i].tmp };\nvar hr = { payload: msg.payload.calidadairemediatemporal[i].hr };\nvar prb = { payload: msg.payload.calidadairemediatemporal[i].prb };\nvar rs = { payload: msg.payload.calidadairemediatemporal[i].rs };\nvar ll = { payload: msg.payload.calidadairemediatemporal[i].ll };\nvar ben = { payload: msg.payload.calidadairemediatemporal[i].ben };\nvar mxil = { payload: msg.payload.calidadairemediatemporal[i].mxil };\nvar pm25 = { payload: msg.payload.calidadairemediatemporal[i].pm25 };\n\nreturn [estacion1,name,latitud,longitud,fecha,periodo,so2,no,co,pm10,o3,dd,tmp,hr,prb,rs,ll,ben,mxil,pm25];",
         "outputs": 20,
         "noerr": 0,
         "initialize": "",
         "finalize": "",
         "libs": [],
-        "x": 910,
-        "y": 1000,
+        "x": 1510,
+        "y": 1460,
         "wires": [
             [
                 "fc1a38813b828a75"
@@ -982,8 +1054,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1280,
-        "y": 540,
+        "x": 1780,
+        "y": 100,
         "wires": []
     },
     {
@@ -999,8 +1071,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1270,
-        "y": 620,
+        "x": 1770,
+        "y": 180,
         "wires": []
     },
     {
@@ -1016,8 +1088,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1270,
-        "y": 700,
+        "x": 1770,
+        "y": 260,
         "wires": []
     },
     {
@@ -1033,8 +1105,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1280,
-        "y": 780,
+        "x": 1780,
+        "y": 340,
         "wires": []
     },
     {
@@ -1050,8 +1122,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1270,
-        "y": 860,
+        "x": 1770,
+        "y": 420,
         "wires": []
     },
     {
@@ -1067,8 +1139,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1280,
-        "y": 900,
+        "x": 1780,
+        "y": 460,
         "wires": []
     },
     {
@@ -1084,8 +1156,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1270,
-        "y": 980,
+        "x": 1770,
+        "y": 540,
         "wires": []
     },
     {
@@ -1101,8 +1173,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1270,
-        "y": 1060,
+        "x": 1770,
+        "y": 620,
         "wires": []
     },
     {
@@ -1118,8 +1190,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1270,
-        "y": 1100,
+        "x": 1770,
+        "y": 660,
         "wires": []
     },
     {
@@ -1135,8 +1207,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1270,
-        "y": 1180,
+        "x": 1770,
+        "y": 740,
         "wires": []
     },
     {
@@ -1152,8 +1224,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1270,
-        "y": 1260,
+        "x": 1770,
+        "y": 820,
         "wires": []
     },
     {
@@ -1169,8 +1241,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1270,
-        "y": 1340,
+        "x": 1770,
+        "y": 900,
         "wires": []
     },
     {
@@ -1186,8 +1258,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1270,
-        "y": 1420,
+        "x": 1770,
+        "y": 980,
         "wires": []
     },
     {
@@ -1203,8 +1275,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1270,
-        "y": 1500,
+        "x": 1770,
+        "y": 1060,
         "wires": []
     },
     {
@@ -1220,8 +1292,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1270,
-        "y": 1580,
+        "x": 1770,
+        "y": 1140,
         "wires": []
     },
     {
@@ -1237,8 +1309,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1270,
-        "y": 1660,
+        "x": 1770,
+        "y": 1220,
         "wires": []
     },
     {
@@ -1254,8 +1326,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1270,
-        "y": 1780,
+        "x": 1770,
+        "y": 1340,
         "wires": []
     },
     {
@@ -1271,8 +1343,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1270,
-        "y": 1860,
+        "x": 1770,
+        "y": 1420,
         "wires": []
     },
     {
@@ -1288,8 +1360,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1270,
-        "y": 1940,
+        "x": 1770,
+        "y": 1500,
         "wires": []
     },
     {
@@ -1305,21 +1377,8 @@
         "targetType": "msg",
         "statusVal": "",
         "statusType": "auto",
-        "x": 1270,
-        "y": 2020,
-        "wires": []
-    },
-    {
-        "id": "9d0a4182bd6d088d",
-        "type": "link out",
-        "z": "992579733deef552",
-        "name": "link out 1",
-        "mode": "link",
-        "links": [
-            "d38e7cf9593d9437"
-        ],
-        "x": 995,
-        "y": 80,
+        "x": 1770,
+        "y": 1580,
         "wires": []
     },
     {
@@ -1330,69 +1389,11 @@
         "links": [
             "9d0a4182bd6d088d"
         ],
-        "x": 735,
-        "y": 1000,
+        "x": 1385,
+        "y": 1460,
         "wires": [
             [
                 "5e1ec5f7893e1946"
-            ]
-        ]
-    },
-    {
-        "id": "30ea1db908e97074",
-        "type": "link out",
-        "z": "992579733deef552",
-        "name": "link out 2",
-        "mode": "link",
-        "links": [
-            "a85b76903d56c458"
-        ],
-        "x": 935,
-        "y": 320,
-        "wires": []
-    },
-    {
-        "id": "a85b76903d56c458",
-        "type": "link in",
-        "z": "992579733deef552",
-        "name": "link in 2",
-        "links": [
-            "30ea1db908e97074"
-        ],
-        "x": 165,
-        "y": 1220,
-        "wires": [
-            [
-                "23d32feae4bd7c39"
-            ]
-        ]
-    },
-    {
-        "id": "0b3647cf902445f5",
-        "type": "link out",
-        "z": "992579733deef552",
-        "name": "link out 3",
-        "mode": "link",
-        "links": [
-            "599a0dd3108dc083"
-        ],
-        "x": 935,
-        "y": 380,
-        "wires": []
-    },
-    {
-        "id": "599a0dd3108dc083",
-        "type": "link in",
-        "z": "992579733deef552",
-        "name": "link in 3",
-        "links": [
-            "0b3647cf902445f5"
-        ],
-        "x": 145,
-        "y": 620,
-        "wires": [
-            [
-                "5e9b35033091f710"
             ]
         ]
     },
@@ -1409,8 +1410,8 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 1280,
-        "y": 580,
+        "x": 1780,
+        "y": 140,
         "wires": []
     },
     {
@@ -1426,8 +1427,8 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 1270,
-        "y": 660,
+        "x": 1770,
+        "y": 220,
         "wires": []
     },
     {
@@ -1443,8 +1444,8 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 1270,
-        "y": 740,
+        "x": 1770,
+        "y": 300,
         "wires": []
     },
     {
@@ -1460,8 +1461,8 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 1280,
-        "y": 820,
+        "x": 1780,
+        "y": 380,
         "wires": []
     },
     {
@@ -1488,8 +1489,8 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 1270,
-        "y": 940,
+        "x": 1770,
+        "y": 500,
         "wires": []
     },
     {
@@ -1516,8 +1517,8 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 1270,
-        "y": 1020,
+        "x": 1770,
+        "y": 580,
         "wires": []
     },
     {
@@ -1544,8 +1545,8 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 1270,
-        "y": 1140,
+        "x": 1770,
+        "y": 700,
         "wires": []
     },
     {
@@ -1572,8 +1573,8 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 1270,
-        "y": 1220,
+        "x": 1770,
+        "y": 780,
         "wires": []
     },
     {
@@ -1600,8 +1601,8 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 1270,
-        "y": 1300,
+        "x": 1770,
+        "y": 860,
         "wires": []
     },
     {
@@ -1628,8 +1629,8 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 1270,
-        "y": 1380,
+        "x": 1770,
+        "y": 940,
         "wires": []
     },
     {
@@ -1656,8 +1657,8 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 1270,
-        "y": 1460,
+        "x": 1770,
+        "y": 1020,
         "wires": []
     },
     {
@@ -1684,8 +1685,8 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 1270,
-        "y": 1540,
+        "x": 1770,
+        "y": 1100,
         "wires": []
     },
     {
@@ -1712,8 +1713,8 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 1270,
-        "y": 1620,
+        "x": 1770,
+        "y": 1180,
         "wires": []
     },
     {
@@ -1734,7 +1735,7 @@
         "dot": false,
         "ymin": "0",
         "ymax": "2000",
-        "removeOlder": 1,
+        "removeOlder": "24",
         "removeOlderPoints": "",
         "removeOlderUnit": "3600",
         "cutout": 0,
@@ -1754,8 +1755,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 1270,
-        "y": 1700,
+        "x": 1770,
+        "y": 1260,
         "wires": [
             []
         ]
@@ -1784,8 +1785,8 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 1270,
-        "y": 1740,
+        "x": 1770,
+        "y": 1300,
         "wires": []
     },
     {
@@ -1812,8 +1813,8 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 1270,
-        "y": 1820,
+        "x": 1770,
+        "y": 1380,
         "wires": []
     },
     {
@@ -1840,8 +1841,8 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 1270,
-        "y": 1900,
+        "x": 1770,
+        "y": 1460,
         "wires": []
     },
     {
@@ -1868,18 +1869,965 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 1270,
-        "y": 1980,
+        "x": 1770,
+        "y": 1540,
         "wires": []
+    },
+    {
+        "id": "86210e338b3c4de8",
+        "type": "function",
+        "z": "992579733deef552",
+        "name": "ESTACION2",
+        "func": "var i=168;\nvar estacion1={payload:msg.payload.calidadairemediatemporal[i]};\nvar name={payload:msg.payload.calidadairemediatemporal[i].título};\nvar latitud = { payload: msg.payload.calidadairemediatemporal[i].latitud };\nvar longitud = { payload: msg.payload.calidadairemediatemporal[i].longitud };\nvar fecha = { payload: msg.payload.calidadairemediatemporal[i].fecha };\nvar periodo = { payload: msg.payload.calidadairemediatemporal[i].periodo };\nvar so2 = { payload: msg.payload.calidadairemediatemporal[i].so2 };\nvar no = { payload: msg.payload.calidadairemediatemporal[i].no };\nvar co = { payload: msg.payload.calidadairemediatemporal[i].co };\nvar pm10 = { payload: msg.payload.calidadairemediatemporal[i].pm10 };\nvar o3 = { payload: msg.payload.calidadairemediatemporal[i].o3 };\nvar dd = { payload: msg.payload.calidadairemediatemporal[i].dd };\nvar tmp = { payload: msg.payload.calidadairemediatemporal[i].tmp };\nvar hr = { payload: msg.payload.calidadairemediatemporal[i].hr };\nvar prb = { payload: msg.payload.calidadairemediatemporal[i].prb };\nvar rs = { payload: msg.payload.calidadairemediatemporal[i].rs };\nvar ll = { payload: msg.payload.calidadairemediatemporal[i].ll };\nvar ben = { payload: msg.payload.calidadairemediatemporal[i].ben };\nvar mxil = { payload: msg.payload.calidadairemediatemporal[i].mxil };\nvar pm25 = { payload: msg.payload.calidadairemediatemporal[i].pm25 };\n\nreturn [estacion1,name,latitud,longitud,fecha,periodo,so2,no,co,pm10,o3,dd,tmp,hr,prb,rs,ll,ben,mxil,pm25];",
+        "outputs": 20,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 2170,
+        "y": 1460,
+        "wires": [
+            [
+                "3638fcb80ff5e2fa"
+            ],
+            [
+                "5b0e5216d2e55bb4",
+                "2c0fa2120c157574"
+            ],
+            [
+                "8d0679d95504e42d",
+                "b18c833297908368"
+            ],
+            [
+                "5b153395bd214b21",
+                "18cd16e892516edc"
+            ],
+            [
+                "5a0929e9d94a2837",
+                "11929530fc49924b"
+            ],
+            [
+                "6372067f2ceefa87"
+            ],
+            [
+                "71468cca28d9d049",
+                "f77c45986aae910b"
+            ],
+            [
+                "738f41d8fd5d8528",
+                "5e3a6b5571dc7070"
+            ],
+            [
+                "e4d189361db2a4b9"
+            ],
+            [
+                "10f19d4d25a6811b",
+                "aed48515b2541bde"
+            ],
+            [
+                "24eb47089fc6326d",
+                "b18adcebae38870f"
+            ],
+            [
+                "1172a18c4442c8a9",
+                "69089728e8d81d1d"
+            ],
+            [
+                "e290fb914262a267",
+                "7710a7a5d7eb24b7"
+            ],
+            [
+                "67f489ff91e1809c",
+                "7e85ff349d8583d8"
+            ],
+            [
+                "0b9b086572e4e39e",
+                "a8faa1314712bfda"
+            ],
+            [
+                "de21673871fa5a04",
+                "112e5aa3744c5e14",
+                "621e1137b272a73a"
+            ],
+            [
+                "cef079693fd3d7dd",
+                "e742506583e86e08"
+            ],
+            [
+                "d8efa3ec7f7be7a8",
+                "2ca1aeedbbe55893"
+            ],
+            [
+                "03914ad3bab4a7f7",
+                "0c4f5fc2b63d92cd"
+            ],
+            [
+                "93556898afd73a83",
+                "b183db8c9a4f3627"
+            ]
+        ]
+    },
+    {
+        "id": "3638fcb80ff5e2fa",
+        "type": "debug",
+        "z": "992579733deef552",
+        "name": "chorizo",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2440,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "5b0e5216d2e55bb4",
+        "type": "debug",
+        "z": "992579733deef552",
+        "name": "titulo",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2430,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "8d0679d95504e42d",
+        "type": "debug",
+        "z": "992579733deef552",
+        "name": "latitud",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2430,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "5b153395bd214b21",
+        "type": "debug",
+        "z": "992579733deef552",
+        "name": "longitud",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2440,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "5a0929e9d94a2837",
+        "type": "debug",
+        "z": "992579733deef552",
+        "name": "fecha",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2430,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "6372067f2ceefa87",
+        "type": "debug",
+        "z": "992579733deef552",
+        "name": "periodo",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2440,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "71468cca28d9d049",
+        "type": "debug",
+        "z": "992579733deef552",
+        "name": "so2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2430,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "738f41d8fd5d8528",
+        "type": "debug",
+        "z": "992579733deef552",
+        "name": "no",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2430,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "e4d189361db2a4b9",
+        "type": "debug",
+        "z": "992579733deef552",
+        "name": "co",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2430,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "10f19d4d25a6811b",
+        "type": "debug",
+        "z": "992579733deef552",
+        "name": "pm10",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2430,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "24eb47089fc6326d",
+        "type": "debug",
+        "z": "992579733deef552",
+        "name": "03",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2430,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "1172a18c4442c8a9",
+        "type": "debug",
+        "z": "992579733deef552",
+        "name": "dd",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2430,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "e290fb914262a267",
+        "type": "debug",
+        "z": "992579733deef552",
+        "name": "tmp",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2430,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "67f489ff91e1809c",
+        "type": "debug",
+        "z": "992579733deef552",
+        "name": "hr",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2430,
+        "y": 1060,
+        "wires": []
+    },
+    {
+        "id": "0b9b086572e4e39e",
+        "type": "debug",
+        "z": "992579733deef552",
+        "name": "prb",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2430,
+        "y": 1140,
+        "wires": []
+    },
+    {
+        "id": "de21673871fa5a04",
+        "type": "debug",
+        "z": "992579733deef552",
+        "name": "rs",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2430,
+        "y": 1220,
+        "wires": []
+    },
+    {
+        "id": "cef079693fd3d7dd",
+        "type": "debug",
+        "z": "992579733deef552",
+        "name": "ll",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2430,
+        "y": 1340,
+        "wires": []
+    },
+    {
+        "id": "d8efa3ec7f7be7a8",
+        "type": "debug",
+        "z": "992579733deef552",
+        "name": "ben",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2430,
+        "y": 1420,
+        "wires": []
+    },
+    {
+        "id": "03914ad3bab4a7f7",
+        "type": "debug",
+        "z": "992579733deef552",
+        "name": "mxil",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2430,
+        "y": 1500,
+        "wires": []
+    },
+    {
+        "id": "93556898afd73a83",
+        "type": "debug",
+        "z": "992579733deef552",
+        "name": "pm25",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 2430,
+        "y": 1580,
+        "wires": []
+    },
+    {
+        "id": "0d39cc8a75bab38d",
+        "type": "link in",
+        "z": "992579733deef552",
+        "name": "link in 1",
+        "links": [
+            "9d0a4182bd6d088d"
+        ],
+        "x": 1995,
+        "y": 1460,
+        "wires": [
+            [
+                "86210e338b3c4de8"
+            ]
+        ]
+    },
+    {
+        "id": "2c0fa2120c157574",
+        "type": "ui_text",
+        "z": "992579733deef552",
+        "group": "aefb9377b583a3e0",
+        "order": 1,
+        "width": "3",
+        "height": "2",
+        "name": "",
+        "label": "Estacion",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 2440,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "b18c833297908368",
+        "type": "ui_text",
+        "z": "992579733deef552",
+        "group": "aefb9377b583a3e0",
+        "order": 2,
+        "width": "3",
+        "height": "2",
+        "name": "",
+        "label": "LAT",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 2430,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "18cd16e892516edc",
+        "type": "ui_text",
+        "z": "992579733deef552",
+        "group": "aefb9377b583a3e0",
+        "order": 3,
+        "width": "3",
+        "height": "2",
+        "name": "",
+        "label": "LNG",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 2430,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "11929530fc49924b",
+        "type": "ui_text",
+        "z": "992579733deef552",
+        "group": "aefb9377b583a3e0",
+        "order": 4,
+        "width": "3",
+        "height": "2",
+        "name": "",
+        "label": "FECHA",
+        "format": "{{msg.payload}}",
+        "layout": "col-center",
+        "className": "",
+        "x": 2440,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "f77c45986aae910b",
+        "type": "ui_gauge",
+        "z": "992579733deef552",
+        "name": "",
+        "group": "aefb9377b583a3e0",
+        "order": 5,
+        "width": "6",
+        "height": "6",
+        "gtype": "gage",
+        "title": "SO2",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 2430,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "5e3a6b5571dc7070",
+        "type": "ui_gauge",
+        "z": "992579733deef552",
+        "name": "",
+        "group": "aefb9377b583a3e0",
+        "order": 6,
+        "width": "6",
+        "height": "6",
+        "gtype": "gage",
+        "title": "NO",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 2430,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "aed48515b2541bde",
+        "type": "ui_gauge",
+        "z": "992579733deef552",
+        "name": "",
+        "group": "aefb9377b583a3e0",
+        "order": 7,
+        "width": "6",
+        "height": "6",
+        "gtype": "gage",
+        "title": "PM10",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 2430,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "b18adcebae38870f",
+        "type": "ui_gauge",
+        "z": "992579733deef552",
+        "name": "",
+        "group": "aefb9377b583a3e0",
+        "order": 8,
+        "width": "6",
+        "height": "6",
+        "gtype": "gage",
+        "title": "O3",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "200",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 2430,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "69089728e8d81d1d",
+        "type": "ui_gauge",
+        "z": "992579733deef552",
+        "name": "",
+        "group": "aefb9377b583a3e0",
+        "order": 9,
+        "width": "6",
+        "height": "6",
+        "gtype": "gage",
+        "title": "DD",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1000",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 2430,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "7710a7a5d7eb24b7",
+        "type": "ui_gauge",
+        "z": "992579733deef552",
+        "name": "",
+        "group": "aefb9377b583a3e0",
+        "order": 10,
+        "width": "6",
+        "height": "6",
+        "gtype": "gage",
+        "title": "TMP",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "60",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 2430,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "7e85ff349d8583d8",
+        "type": "ui_gauge",
+        "z": "992579733deef552",
+        "name": "",
+        "group": "aefb9377b583a3e0",
+        "order": 11,
+        "width": "6",
+        "height": "6",
+        "gtype": "gage",
+        "title": "HR",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 2430,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "a8faa1314712bfda",
+        "type": "ui_gauge",
+        "z": "992579733deef552",
+        "name": "",
+        "group": "aefb9377b583a3e0",
+        "order": 12,
+        "width": "6",
+        "height": "6",
+        "gtype": "gage",
+        "title": "PRB",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "1100",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 2430,
+        "y": 1100,
+        "wires": []
+    },
+    {
+        "id": "112e5aa3744c5e14",
+        "type": "ui_gauge",
+        "z": "992579733deef552",
+        "name": "",
+        "group": "aefb9377b583a3e0",
+        "order": 13,
+        "width": "6",
+        "height": "6",
+        "gtype": "gage",
+        "title": "RS",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": "2000",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 2430,
+        "y": 1180,
+        "wires": []
+    },
+    {
+        "id": "621e1137b272a73a",
+        "type": "ui_chart",
+        "z": "992579733deef552",
+        "name": "",
+        "group": "aefb9377b583a3e0",
+        "order": 14,
+        "width": 0,
+        "height": 0,
+        "label": "RS",
+        "chartType": "line",
+        "legend": "false",
+        "xformat": "HH:mm",
+        "interpolate": "linear",
+        "nodata": "",
+        "dot": false,
+        "ymin": "0",
+        "ymax": "2000",
+        "removeOlder": "24",
+        "removeOlderPoints": "",
+        "removeOlderUnit": "3600",
+        "cutout": 0,
+        "useOneColor": false,
+        "useUTC": false,
+        "colors": [
+            "#1f77b4",
+            "#aec7e8",
+            "#ff7f0e",
+            "#2ca02c",
+            "#98df8a",
+            "#d62728",
+            "#ff9896",
+            "#9467bd",
+            "#c5b0d5"
+        ],
+        "outputs": 1,
+        "useDifferentColor": false,
+        "className": "",
+        "x": 2430,
+        "y": 1260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "e742506583e86e08",
+        "type": "ui_gauge",
+        "z": "992579733deef552",
+        "name": "",
+        "group": "aefb9377b583a3e0",
+        "order": 15,
+        "width": "6",
+        "height": "6",
+        "gtype": "gage",
+        "title": "LL",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 2430,
+        "y": 1300,
+        "wires": []
+    },
+    {
+        "id": "2ca1aeedbbe55893",
+        "type": "ui_gauge",
+        "z": "992579733deef552",
+        "name": "",
+        "group": "aefb9377b583a3e0",
+        "order": 16,
+        "width": "6",
+        "height": "6",
+        "gtype": "gage",
+        "title": "BEN",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 2430,
+        "y": 1380,
+        "wires": []
+    },
+    {
+        "id": "0c4f5fc2b63d92cd",
+        "type": "ui_gauge",
+        "z": "992579733deef552",
+        "name": "",
+        "group": "aefb9377b583a3e0",
+        "order": 17,
+        "width": "6",
+        "height": "6",
+        "gtype": "gage",
+        "title": "MXIL",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 2430,
+        "y": 1460,
+        "wires": []
+    },
+    {
+        "id": "b183db8c9a4f3627",
+        "type": "ui_gauge",
+        "z": "992579733deef552",
+        "name": "",
+        "group": "aefb9377b583a3e0",
+        "order": 18,
+        "width": "6",
+        "height": "6",
+        "gtype": "gage",
+        "title": "PM25",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "diff": false,
+        "className": "",
+        "x": 2430,
+        "y": 1540,
+        "wires": []
+    },
+    {
+        "id": "aee296a1c28e4fbb",
+        "type": "ui_spacer",
+        "z": "992579733deef552",
+        "name": "spacer",
+        "group": "aefb9377b583a3e0",
+        "order": 2,
+        "width": 1,
+        "height": 1
     },
     {
         "id": "46d9f3d9ce5f567e",
         "type": "ui_group",
-        "name": "ESTACION",
+        "name": "ESTACION1",
         "tab": "58217e0ae659a8c5",
         "order": 1,
         "disp": true,
-        "width": "12",
+        "width": "24",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "aefb9377b583a3e0",
+        "type": "ui_group",
+        "name": "ESTACION2",
+        "tab": "58217e0ae659a8c5",
+        "order": 2,
+        "disp": true,
+        "width": "24",
         "collapse": false,
         "className": ""
     },
