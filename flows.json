@@ -8,6 +8,536 @@
         "env": []
     },
     {
+        "id": "2d04c88e95dacfb0",
+        "type": "tab",
+        "label": "TTN-WEATHER STATION",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "e342a8f2d60208dc",
+        "type": "tab",
+        "label": "VISUALIZE",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "7ae1632d769de4b2",
+        "type": "subflow",
+        "name": "EXTRACCION DATOS ESTACION",
+        "info": "",
+        "category": "",
+        "in": [
+            {
+                "x": 50,
+                "y": 30,
+                "wires": [
+                    {
+                        "id": "ce1707cc9305f175"
+                    }
+                ]
+            }
+        ],
+        "out": [
+            {
+                "x": 540,
+                "y": 140,
+                "wires": [
+                    {
+                        "id": "ce1707cc9305f175",
+                        "port": 0
+                    }
+                ]
+            },
+            {
+                "x": 540,
+                "y": 180,
+                "wires": [
+                    {
+                        "id": "ce1707cc9305f175",
+                        "port": 1
+                    }
+                ]
+            },
+            {
+                "x": 540,
+                "y": 220,
+                "wires": [
+                    {
+                        "id": "ce1707cc9305f175",
+                        "port": 2
+                    }
+                ]
+            },
+            {
+                "x": 540,
+                "y": 260,
+                "wires": [
+                    {
+                        "id": "ce1707cc9305f175",
+                        "port": 3
+                    }
+                ]
+            },
+            {
+                "x": 540,
+                "y": 300,
+                "wires": [
+                    {
+                        "id": "ce1707cc9305f175",
+                        "port": 4
+                    }
+                ]
+            },
+            {
+                "x": 540,
+                "y": 340,
+                "wires": [
+                    {
+                        "id": "ce1707cc9305f175",
+                        "port": 5
+                    }
+                ]
+            },
+            {
+                "x": 540,
+                "y": 380,
+                "wires": [
+                    {
+                        "id": "ce1707cc9305f175",
+                        "port": 6
+                    }
+                ]
+            },
+            {
+                "x": 540,
+                "y": 420,
+                "wires": [
+                    {
+                        "id": "ce1707cc9305f175",
+                        "port": 7
+                    }
+                ]
+            },
+            {
+                "x": 540,
+                "y": 460,
+                "wires": [
+                    {
+                        "id": "ce1707cc9305f175",
+                        "port": 8
+                    }
+                ]
+            },
+            {
+                "x": 540,
+                "y": 500,
+                "wires": [
+                    {
+                        "id": "ce1707cc9305f175",
+                        "port": 9
+                    }
+                ]
+            },
+            {
+                "x": 540,
+                "y": 540,
+                "wires": [
+                    {
+                        "id": "ce1707cc9305f175",
+                        "port": 10
+                    }
+                ]
+            },
+            {
+                "x": 540,
+                "y": 580,
+                "wires": [
+                    {
+                        "id": "ce1707cc9305f175",
+                        "port": 11
+                    }
+                ]
+            },
+            {
+                "x": 540,
+                "y": 620,
+                "wires": [
+                    {
+                        "id": "ce1707cc9305f175",
+                        "port": 12
+                    }
+                ]
+            },
+            {
+                "x": 540,
+                "y": 660,
+                "wires": [
+                    {
+                        "id": "ce1707cc9305f175",
+                        "port": 13
+                    }
+                ]
+            },
+            {
+                "x": 540,
+                "y": 700,
+                "wires": [
+                    {
+                        "id": "ce1707cc9305f175",
+                        "port": 14
+                    }
+                ]
+            },
+            {
+                "x": 540,
+                "y": 740,
+                "wires": [
+                    {
+                        "id": "ce1707cc9305f175",
+                        "port": 15
+                    }
+                ]
+            },
+            {
+                "x": 540,
+                "y": 780,
+                "wires": [
+                    {
+                        "id": "ce1707cc9305f175",
+                        "port": 16
+                    }
+                ]
+            },
+            {
+                "x": 540,
+                "y": 820,
+                "wires": [
+                    {
+                        "id": "ce1707cc9305f175",
+                        "port": 17
+                    }
+                ]
+            },
+            {
+                "x": 540,
+                "y": 860,
+                "wires": [
+                    {
+                        "id": "ce1707cc9305f175",
+                        "port": 18
+                    }
+                ]
+            },
+            {
+                "x": 540,
+                "y": 900,
+                "wires": [
+                    {
+                        "id": "ce1707cc9305f175",
+                        "port": 19
+                    }
+                ]
+            }
+        ],
+        "env": [],
+        "meta": {},
+        "color": "#DDAA99"
+    },
+    {
+        "id": "51aab4ca8e0f1c0a",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "eu1.cloud.thethings.network",
+        "port": "1883",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "userProps": "",
+        "sessionExpiry": ""
+    },
+    {
+        "id": "21d6aae4.8f7156",
+        "type": "mqtt-broker",
+        "name": "HiveMQ",
+        "broker": "broker.hivemq.com",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": true,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "d7cfce97d9893a4a",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "58217e0ae659a8c5",
+        "type": "ui_tab",
+        "name": "1",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "46d9f3d9ce5f567e",
+        "type": "ui_group",
+        "name": "ESTACION1",
+        "tab": "58217e0ae659a8c5",
+        "order": 1,
+        "disp": true,
+        "width": "24",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "aefb9377b583a3e0",
+        "type": "ui_group",
+        "name": "ESTACION2",
+        "tab": "0e3b238fd183ed6e",
+        "order": 1,
+        "disp": true,
+        "width": "24",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "aee296a1c28e4fbb",
+        "type": "ui_spacer",
+        "z": "992579733deef552",
+        "name": "spacer",
+        "group": "aefb9377b583a3e0",
+        "order": 2,
+        "width": 1,
+        "height": 1
+    },
+    {
+        "id": "0e3b238fd183ed6e",
+        "type": "ui_tab",
+        "name": "2",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "8ac59f774be6e9a3",
+        "type": "ui_spacer",
+        "z": "992579733deef552",
+        "name": "spacer",
+        "group": "46d9f3d9ce5f567e",
+        "order": 16,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "8e140ade9a4d64e8",
+        "type": "ui_spacer",
+        "z": "992579733deef552",
+        "name": "spacer",
+        "group": "46d9f3d9ce5f567e",
+        "order": 20,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "e70718e45ecddb9f",
+        "type": "ui_spacer",
+        "z": "992579733deef552",
+        "name": "spacer",
+        "group": "46d9f3d9ce5f567e",
+        "order": 21,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "b07ee5e0f9609f4a",
+        "type": "ui_spacer",
+        "z": "992579733deef552",
+        "name": "spacer",
+        "group": "46d9f3d9ce5f567e",
+        "order": 22,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "e7843eb1564ce97a",
+        "type": "ui_spacer",
+        "z": "992579733deef552",
+        "name": "spacer",
+        "group": "46d9f3d9ce5f567e",
+        "order": 23,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "e02bd5593646b842",
+        "type": "ui_spacer",
+        "z": "992579733deef552",
+        "name": "spacer",
+        "group": "46d9f3d9ce5f567e",
+        "order": 24,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "ce1707cc9305f175",
+        "type": "function",
+        "z": "7ae1632d769de4b2",
+        "name": "function 11",
+        "func": "\nvar estacion = { payload: msg.payload.estacion};\nvar name = { payload: msg.payload.título };\nvar latitud = { payload: msg.payload.latitud };\nvar longitud = { payload: msg.payload.longitud };\nvar fecha = { payload: msg.payload.fecha };\nvar periodo = { payload: msg.payload.periodo };\nvar so2 = { payload: msg.payload.so2 };\nvar no = { payload: msg.payload.no };\nvar co = { payload: msg.payload.co };\nvar pm10 = { payload: msg.payload.pm10 };\nvar o3 = { payload: msg.payload.o3 };\nvar dd = { payload: msg.payload.dd };\nvar tmp = { payload: msg.payload.tmp };\nvar hr = { payload: msg.payload.hr };\nvar prb = { payload: msg.payload.prb };\nvar rs = { payload: msg.payload.rs };\nvar ll = { payload: msg.payload.ll };\nvar ben = { payload: msg.payload.ben };\nvar mxil = { payload: msg.payload.mxil };\nvar pm25 = { payload: msg.payload.pm25 };\n\nreturn [estacion, name, latitud, longitud, fecha, periodo, so2, no, co, pm10, o3, dd, tmp, hr, prb, rs, ll, ben, mxil, pm25];\n",
+        "outputs": 20,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 230,
+        "y": 560,
+        "wires": [
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            [],
+            []
+        ]
+    },
+    {
         "id": "27a0f42b5200e41e",
         "type": "inject",
         "z": "992579733deef552",
@@ -68,7 +598,7 @@
         "type": "debug",
         "z": "992579733deef552",
         "name": "debug 1",
-        "active": true,
+        "active": false,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
@@ -948,440 +1478,6 @@
         ]
     },
     {
-        "id": "5e1ec5f7893e1946",
-        "type": "function",
-        "z": "992579733deef552",
-        "name": "ESTACION1",
-        "func": "var i=0;\nvar estacion1={payload:msg.payload.calidadairemediatemporal[i]};\nvar name={payload:msg.payload.calidadairemediatemporal[i].título};\nvar latitud = { payload: msg.payload.calidadairemediatemporal[i].latitud };\nvar longitud = { payload: msg.payload.calidadairemediatemporal[i].longitud };\nvar fecha = { payload: msg.payload.calidadairemediatemporal[i].fecha };\nvar periodo = { payload: msg.payload.calidadairemediatemporal[i].periodo };\nvar so2 = { payload: msg.payload.calidadairemediatemporal[i].so2 };\nvar no = { payload: msg.payload.calidadairemediatemporal[i].no };\nvar co = { payload: msg.payload.calidadairemediatemporal[i].co };\nvar pm10 = { payload: msg.payload.calidadairemediatemporal[i].pm10 };\nvar o3 = { payload: msg.payload.calidadairemediatemporal[i].o3 };\nvar dd = { payload: msg.payload.calidadairemediatemporal[i].dd };\nvar tmp = { payload: msg.payload.calidadairemediatemporal[i].tmp };\nvar hr = { payload: msg.payload.calidadairemediatemporal[i].hr };\nvar prb = { payload: msg.payload.calidadairemediatemporal[i].prb };\nvar rs = { payload: msg.payload.calidadairemediatemporal[i].rs };\nvar ll = { payload: msg.payload.calidadairemediatemporal[i].ll };\nvar ben = { payload: msg.payload.calidadairemediatemporal[i].ben };\nvar mxil = { payload: msg.payload.calidadairemediatemporal[i].mxil };\nvar pm25 = { payload: msg.payload.calidadairemediatemporal[i].pm25 };\n\nreturn [estacion1,name,latitud,longitud,fecha,periodo,so2,no,co,pm10,o3,dd,tmp,hr,prb,rs,ll,ben,mxil,pm25];",
-        "outputs": 20,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 1510,
-        "y": 1460,
-        "wires": [
-            [
-                "fc1a38813b828a75"
-            ],
-            [
-                "60dfca5174cababa",
-                "f420b738957fd299"
-            ],
-            [
-                "b16d1825bf075f4a",
-                "f2694cb16a0276ab"
-            ],
-            [
-                "228252e4b2a23c6c",
-                "d95fc9c10eb340a4"
-            ],
-            [
-                "f4f24694dd83e0c8",
-                "19d1c40120e630f1"
-            ],
-            [
-                "c63dab4cdc78b8a3"
-            ],
-            [
-                "1c5bc9c86d835435",
-                "a785a5cb5481507f"
-            ],
-            [
-                "c77974502abb3dff",
-                "aba6456f316cad83"
-            ],
-            [
-                "0968a172e045ef9e"
-            ],
-            [
-                "541f24936bd99d7b",
-                "7e3fcf8121f0b2a3"
-            ],
-            [
-                "cfa9518850ae3288",
-                "263b091d51fa4a6b"
-            ],
-            [
-                "9700c7b332d0d1de",
-                "a6c90854d015af52"
-            ],
-            [
-                "2cab45e048d1b241",
-                "7ffbc94b1620e968"
-            ],
-            [
-                "295385a2bfc22f0f",
-                "aa03324c7293ad70"
-            ],
-            [
-                "79b163a6efd06ae3",
-                "b92fe81c77ea6bf8"
-            ],
-            [
-                "6effe09d4e146ad9",
-                "1d9f05bc928401db",
-                "935be5427f315195"
-            ],
-            [
-                "5291401b07ebef68",
-                "a611cc4bfd3d4bda"
-            ],
-            [
-                "2753c9142f3a5eeb",
-                "e236719bb83c8c41"
-            ],
-            [
-                "e169db8f43eb2adc",
-                "55d90d791d958b1e"
-            ],
-            [
-                "523d9f4b91f19654",
-                "07f8d37916a923e5"
-            ]
-        ]
-    },
-    {
-        "id": "fc1a38813b828a75",
-        "type": "debug",
-        "z": "992579733deef552",
-        "name": "chorizo",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1780,
-        "y": 100,
-        "wires": []
-    },
-    {
-        "id": "60dfca5174cababa",
-        "type": "debug",
-        "z": "992579733deef552",
-        "name": "titulo",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1770,
-        "y": 180,
-        "wires": []
-    },
-    {
-        "id": "b16d1825bf075f4a",
-        "type": "debug",
-        "z": "992579733deef552",
-        "name": "latitud",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1770,
-        "y": 260,
-        "wires": []
-    },
-    {
-        "id": "228252e4b2a23c6c",
-        "type": "debug",
-        "z": "992579733deef552",
-        "name": "longitud",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1780,
-        "y": 340,
-        "wires": []
-    },
-    {
-        "id": "f4f24694dd83e0c8",
-        "type": "debug",
-        "z": "992579733deef552",
-        "name": "fecha",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1770,
-        "y": 420,
-        "wires": []
-    },
-    {
-        "id": "c63dab4cdc78b8a3",
-        "type": "debug",
-        "z": "992579733deef552",
-        "name": "periodo",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1780,
-        "y": 460,
-        "wires": []
-    },
-    {
-        "id": "1c5bc9c86d835435",
-        "type": "debug",
-        "z": "992579733deef552",
-        "name": "so2",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1770,
-        "y": 540,
-        "wires": []
-    },
-    {
-        "id": "c77974502abb3dff",
-        "type": "debug",
-        "z": "992579733deef552",
-        "name": "no",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1770,
-        "y": 620,
-        "wires": []
-    },
-    {
-        "id": "0968a172e045ef9e",
-        "type": "debug",
-        "z": "992579733deef552",
-        "name": "co",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1770,
-        "y": 660,
-        "wires": []
-    },
-    {
-        "id": "541f24936bd99d7b",
-        "type": "debug",
-        "z": "992579733deef552",
-        "name": "pm10",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1770,
-        "y": 740,
-        "wires": []
-    },
-    {
-        "id": "cfa9518850ae3288",
-        "type": "debug",
-        "z": "992579733deef552",
-        "name": "03",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1770,
-        "y": 820,
-        "wires": []
-    },
-    {
-        "id": "9700c7b332d0d1de",
-        "type": "debug",
-        "z": "992579733deef552",
-        "name": "dd",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1770,
-        "y": 900,
-        "wires": []
-    },
-    {
-        "id": "2cab45e048d1b241",
-        "type": "debug",
-        "z": "992579733deef552",
-        "name": "tmp",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1770,
-        "y": 980,
-        "wires": []
-    },
-    {
-        "id": "295385a2bfc22f0f",
-        "type": "debug",
-        "z": "992579733deef552",
-        "name": "hr",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1770,
-        "y": 1060,
-        "wires": []
-    },
-    {
-        "id": "79b163a6efd06ae3",
-        "type": "debug",
-        "z": "992579733deef552",
-        "name": "prb",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1770,
-        "y": 1140,
-        "wires": []
-    },
-    {
-        "id": "6effe09d4e146ad9",
-        "type": "debug",
-        "z": "992579733deef552",
-        "name": "rs",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1770,
-        "y": 1220,
-        "wires": []
-    },
-    {
-        "id": "5291401b07ebef68",
-        "type": "debug",
-        "z": "992579733deef552",
-        "name": "ll",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1770,
-        "y": 1340,
-        "wires": []
-    },
-    {
-        "id": "2753c9142f3a5eeb",
-        "type": "debug",
-        "z": "992579733deef552",
-        "name": "ben",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1770,
-        "y": 1420,
-        "wires": []
-    },
-    {
-        "id": "e169db8f43eb2adc",
-        "type": "debug",
-        "z": "992579733deef552",
-        "name": "mxil",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1770,
-        "y": 1500,
-        "wires": []
-    },
-    {
-        "id": "523d9f4b91f19654",
-        "type": "debug",
-        "z": "992579733deef552",
-        "name": "pm25",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 1770,
-        "y": 1580,
-        "wires": []
-    },
-    {
         "id": "d38e7cf9593d9437",
         "type": "link in",
         "z": "992579733deef552",
@@ -1389,11 +1485,11 @@
         "links": [
             "9d0a4182bd6d088d"
         ],
-        "x": 1385,
-        "y": 1460,
+        "x": 835,
+        "y": 800,
         "wires": [
             [
-                "5e1ec5f7893e1946"
+                "60bf85994a05eb49"
             ]
         ]
     },
@@ -1403,15 +1499,15 @@
         "z": "992579733deef552",
         "group": "46d9f3d9ce5f567e",
         "order": 1,
-        "width": "3",
-        "height": "2",
+        "width": 3,
+        "height": 2,
         "name": "",
         "label": "Estacion",
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 1780,
-        "y": 140,
+        "x": 1880,
+        "y": 60,
         "wires": []
     },
     {
@@ -1420,15 +1516,15 @@
         "z": "992579733deef552",
         "group": "46d9f3d9ce5f567e",
         "order": 2,
-        "width": "3",
-        "height": "2",
+        "width": 3,
+        "height": 2,
         "name": "",
         "label": "LAT",
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 1770,
-        "y": 220,
+        "x": 1870,
+        "y": 100,
         "wires": []
     },
     {
@@ -1437,15 +1533,15 @@
         "z": "992579733deef552",
         "group": "46d9f3d9ce5f567e",
         "order": 3,
-        "width": "3",
-        "height": "2",
+        "width": 3,
+        "height": 2,
         "name": "",
         "label": "LNG",
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 1770,
-        "y": 300,
+        "x": 1870,
+        "y": 140,
         "wires": []
     },
     {
@@ -1454,15 +1550,15 @@
         "z": "992579733deef552",
         "group": "46d9f3d9ce5f567e",
         "order": 4,
-        "width": "3",
-        "height": "2",
+        "width": 3,
+        "height": 2,
         "name": "",
         "label": "FECHA",
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 1780,
-        "y": 380,
+        "x": 1880,
+        "y": 180,
         "wires": []
     },
     {
@@ -1472,8 +1568,8 @@
         "name": "",
         "group": "46d9f3d9ce5f567e",
         "order": 5,
-        "width": "6",
-        "height": "6",
+        "width": 6,
+        "height": 6,
         "gtype": "gage",
         "title": "SO2",
         "label": "units",
@@ -1489,8 +1585,8 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 1770,
-        "y": 500,
+        "x": 1870,
+        "y": 260,
         "wires": []
     },
     {
@@ -1500,8 +1596,8 @@
         "name": "",
         "group": "46d9f3d9ce5f567e",
         "order": 6,
-        "width": "6",
-        "height": "6",
+        "width": 6,
+        "height": 6,
         "gtype": "gage",
         "title": "NO",
         "label": "units",
@@ -1517,8 +1613,8 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 1770,
-        "y": 580,
+        "x": 1870,
+        "y": 300,
         "wires": []
     },
     {
@@ -1528,8 +1624,8 @@
         "name": "",
         "group": "46d9f3d9ce5f567e",
         "order": 7,
-        "width": "6",
-        "height": "6",
+        "width": 6,
+        "height": 6,
         "gtype": "gage",
         "title": "PM10",
         "label": "units",
@@ -1545,8 +1641,8 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 1770,
-        "y": 700,
+        "x": 1870,
+        "y": 380,
         "wires": []
     },
     {
@@ -1556,8 +1652,8 @@
         "name": "",
         "group": "46d9f3d9ce5f567e",
         "order": 8,
-        "width": "6",
-        "height": "6",
+        "width": 6,
+        "height": 6,
         "gtype": "gage",
         "title": "O3",
         "label": "units",
@@ -1573,8 +1669,8 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 1770,
-        "y": 780,
+        "x": 1870,
+        "y": 420,
         "wires": []
     },
     {
@@ -1584,8 +1680,8 @@
         "name": "",
         "group": "46d9f3d9ce5f567e",
         "order": 9,
-        "width": "6",
-        "height": "6",
+        "width": 6,
+        "height": 6,
         "gtype": "gage",
         "title": "DD",
         "label": "units",
@@ -1601,8 +1697,8 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 1770,
-        "y": 860,
+        "x": 1870,
+        "y": 460,
         "wires": []
     },
     {
@@ -1612,8 +1708,8 @@
         "name": "",
         "group": "46d9f3d9ce5f567e",
         "order": 10,
-        "width": "6",
-        "height": "6",
+        "width": 6,
+        "height": 6,
         "gtype": "gage",
         "title": "TMP",
         "label": "units",
@@ -1629,8 +1725,8 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 1770,
-        "y": 940,
+        "x": 1870,
+        "y": 500,
         "wires": []
     },
     {
@@ -1640,8 +1736,8 @@
         "name": "",
         "group": "46d9f3d9ce5f567e",
         "order": 11,
-        "width": "6",
-        "height": "6",
+        "width": 6,
+        "height": 6,
         "gtype": "gage",
         "title": "HR",
         "label": "units",
@@ -1657,8 +1753,8 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 1770,
-        "y": 1020,
+        "x": 1870,
+        "y": 540,
         "wires": []
     },
     {
@@ -1668,8 +1764,8 @@
         "name": "",
         "group": "46d9f3d9ce5f567e",
         "order": 12,
-        "width": "6",
-        "height": "6",
+        "width": 6,
+        "height": 6,
         "gtype": "gage",
         "title": "PRB",
         "label": "units",
@@ -1685,8 +1781,8 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 1770,
-        "y": 1100,
+        "x": 1870,
+        "y": 580,
         "wires": []
     },
     {
@@ -1696,8 +1792,8 @@
         "name": "",
         "group": "46d9f3d9ce5f567e",
         "order": 13,
-        "width": "6",
-        "height": "6",
+        "width": 6,
+        "height": 2,
         "gtype": "gage",
         "title": "RS",
         "label": "units",
@@ -1713,8 +1809,8 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 1770,
-        "y": 1180,
+        "x": 1870,
+        "y": 620,
         "wires": []
     },
     {
@@ -1723,7 +1819,7 @@
         "z": "992579733deef552",
         "name": "",
         "group": "46d9f3d9ce5f567e",
-        "order": 14,
+        "order": 15,
         "width": 0,
         "height": 0,
         "label": "RS",
@@ -1755,8 +1851,8 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 1770,
-        "y": 1260,
+        "x": 1870,
+        "y": 660,
         "wires": [
             []
         ]
@@ -1767,9 +1863,9 @@
         "z": "992579733deef552",
         "name": "",
         "group": "46d9f3d9ce5f567e",
-        "order": 15,
-        "width": "6",
-        "height": "6",
+        "order": 14,
+        "width": 6,
+        "height": 2,
         "gtype": "gage",
         "title": "LL",
         "label": "units",
@@ -1785,8 +1881,8 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 1770,
-        "y": 1300,
+        "x": 1870,
+        "y": 700,
         "wires": []
     },
     {
@@ -1795,9 +1891,9 @@
         "z": "992579733deef552",
         "name": "",
         "group": "46d9f3d9ce5f567e",
-        "order": 16,
-        "width": "6",
-        "height": "6",
+        "order": 17,
+        "width": 6,
+        "height": 6,
         "gtype": "gage",
         "title": "BEN",
         "label": "units",
@@ -1813,8 +1909,8 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 1770,
-        "y": 1380,
+        "x": 1870,
+        "y": 740,
         "wires": []
     },
     {
@@ -1823,9 +1919,9 @@
         "z": "992579733deef552",
         "name": "",
         "group": "46d9f3d9ce5f567e",
-        "order": 17,
-        "width": "6",
-        "height": "6",
+        "order": 18,
+        "width": 6,
+        "height": 6,
         "gtype": "gage",
         "title": "MXIL",
         "label": "units",
@@ -1841,8 +1937,8 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 1770,
-        "y": 1460,
+        "x": 1870,
+        "y": 780,
         "wires": []
     },
     {
@@ -1851,9 +1947,9 @@
         "z": "992579733deef552",
         "name": "",
         "group": "46d9f3d9ce5f567e",
-        "order": 18,
-        "width": "6",
-        "height": "6",
+        "order": 19,
+        "width": 6,
+        "height": 6,
         "gtype": "gage",
         "title": "PM25",
         "label": "units",
@@ -1869,462 +1965,160 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 1770,
-        "y": 1540,
-        "wires": []
-    },
-    {
-        "id": "86210e338b3c4de8",
-        "type": "function",
-        "z": "992579733deef552",
-        "name": "ESTACION2",
-        "func": "var i=168;\nvar estacion1={payload:msg.payload.calidadairemediatemporal[i]};\nvar name={payload:msg.payload.calidadairemediatemporal[i].título};\nvar latitud = { payload: msg.payload.calidadairemediatemporal[i].latitud };\nvar longitud = { payload: msg.payload.calidadairemediatemporal[i].longitud };\nvar fecha = { payload: msg.payload.calidadairemediatemporal[i].fecha };\nvar periodo = { payload: msg.payload.calidadairemediatemporal[i].periodo };\nvar so2 = { payload: msg.payload.calidadairemediatemporal[i].so2 };\nvar no = { payload: msg.payload.calidadairemediatemporal[i].no };\nvar co = { payload: msg.payload.calidadairemediatemporal[i].co };\nvar pm10 = { payload: msg.payload.calidadairemediatemporal[i].pm10 };\nvar o3 = { payload: msg.payload.calidadairemediatemporal[i].o3 };\nvar dd = { payload: msg.payload.calidadairemediatemporal[i].dd };\nvar tmp = { payload: msg.payload.calidadairemediatemporal[i].tmp };\nvar hr = { payload: msg.payload.calidadairemediatemporal[i].hr };\nvar prb = { payload: msg.payload.calidadairemediatemporal[i].prb };\nvar rs = { payload: msg.payload.calidadairemediatemporal[i].rs };\nvar ll = { payload: msg.payload.calidadairemediatemporal[i].ll };\nvar ben = { payload: msg.payload.calidadairemediatemporal[i].ben };\nvar mxil = { payload: msg.payload.calidadairemediatemporal[i].mxil };\nvar pm25 = { payload: msg.payload.calidadairemediatemporal[i].pm25 };\n\nreturn [estacion1,name,latitud,longitud,fecha,periodo,so2,no,co,pm10,o3,dd,tmp,hr,prb,rs,ll,ben,mxil,pm25];",
-        "outputs": 20,
-        "noerr": 0,
-        "initialize": "",
-        "finalize": "",
-        "libs": [],
-        "x": 2170,
-        "y": 1460,
-        "wires": [
-            [
-                "3638fcb80ff5e2fa"
-            ],
-            [
-                "5b0e5216d2e55bb4",
-                "2c0fa2120c157574"
-            ],
-            [
-                "8d0679d95504e42d",
-                "b18c833297908368"
-            ],
-            [
-                "5b153395bd214b21",
-                "18cd16e892516edc"
-            ],
-            [
-                "5a0929e9d94a2837",
-                "11929530fc49924b"
-            ],
-            [
-                "6372067f2ceefa87"
-            ],
-            [
-                "71468cca28d9d049",
-                "f77c45986aae910b"
-            ],
-            [
-                "738f41d8fd5d8528",
-                "5e3a6b5571dc7070"
-            ],
-            [
-                "e4d189361db2a4b9"
-            ],
-            [
-                "10f19d4d25a6811b",
-                "aed48515b2541bde"
-            ],
-            [
-                "24eb47089fc6326d",
-                "b18adcebae38870f"
-            ],
-            [
-                "1172a18c4442c8a9",
-                "69089728e8d81d1d"
-            ],
-            [
-                "e290fb914262a267",
-                "7710a7a5d7eb24b7"
-            ],
-            [
-                "67f489ff91e1809c",
-                "7e85ff349d8583d8"
-            ],
-            [
-                "0b9b086572e4e39e",
-                "a8faa1314712bfda"
-            ],
-            [
-                "de21673871fa5a04",
-                "112e5aa3744c5e14",
-                "621e1137b272a73a"
-            ],
-            [
-                "cef079693fd3d7dd",
-                "e742506583e86e08"
-            ],
-            [
-                "d8efa3ec7f7be7a8",
-                "2ca1aeedbbe55893"
-            ],
-            [
-                "03914ad3bab4a7f7",
-                "0c4f5fc2b63d92cd"
-            ],
-            [
-                "93556898afd73a83",
-                "b183db8c9a4f3627"
-            ]
-        ]
-    },
-    {
-        "id": "3638fcb80ff5e2fa",
-        "type": "debug",
-        "z": "992579733deef552",
-        "name": "chorizo",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 2440,
-        "y": 100,
-        "wires": []
-    },
-    {
-        "id": "5b0e5216d2e55bb4",
-        "type": "debug",
-        "z": "992579733deef552",
-        "name": "titulo",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 2430,
-        "y": 180,
-        "wires": []
-    },
-    {
-        "id": "8d0679d95504e42d",
-        "type": "debug",
-        "z": "992579733deef552",
-        "name": "latitud",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 2430,
-        "y": 260,
-        "wires": []
-    },
-    {
-        "id": "5b153395bd214b21",
-        "type": "debug",
-        "z": "992579733deef552",
-        "name": "longitud",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 2440,
-        "y": 340,
-        "wires": []
-    },
-    {
-        "id": "5a0929e9d94a2837",
-        "type": "debug",
-        "z": "992579733deef552",
-        "name": "fecha",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 2430,
-        "y": 420,
-        "wires": []
-    },
-    {
-        "id": "6372067f2ceefa87",
-        "type": "debug",
-        "z": "992579733deef552",
-        "name": "periodo",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 2440,
-        "y": 460,
-        "wires": []
-    },
-    {
-        "id": "71468cca28d9d049",
-        "type": "debug",
-        "z": "992579733deef552",
-        "name": "so2",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 2430,
-        "y": 540,
-        "wires": []
-    },
-    {
-        "id": "738f41d8fd5d8528",
-        "type": "debug",
-        "z": "992579733deef552",
-        "name": "no",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 2430,
-        "y": 620,
-        "wires": []
-    },
-    {
-        "id": "e4d189361db2a4b9",
-        "type": "debug",
-        "z": "992579733deef552",
-        "name": "co",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 2430,
-        "y": 660,
-        "wires": []
-    },
-    {
-        "id": "10f19d4d25a6811b",
-        "type": "debug",
-        "z": "992579733deef552",
-        "name": "pm10",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 2430,
-        "y": 740,
-        "wires": []
-    },
-    {
-        "id": "24eb47089fc6326d",
-        "type": "debug",
-        "z": "992579733deef552",
-        "name": "03",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 2430,
+        "x": 1870,
         "y": 820,
         "wires": []
     },
     {
-        "id": "1172a18c4442c8a9",
-        "type": "debug",
+        "id": "60bf85994a05eb49",
+        "type": "split",
         "z": "992579733deef552",
-        "name": "dd",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 2430,
-        "y": 900,
-        "wires": []
-    },
-    {
-        "id": "e290fb914262a267",
-        "type": "debug",
-        "z": "992579733deef552",
-        "name": "tmp",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 2430,
-        "y": 980,
-        "wires": []
-    },
-    {
-        "id": "67f489ff91e1809c",
-        "type": "debug",
-        "z": "992579733deef552",
-        "name": "hr",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 2430,
-        "y": 1060,
-        "wires": []
-    },
-    {
-        "id": "0b9b086572e4e39e",
-        "type": "debug",
-        "z": "992579733deef552",
-        "name": "prb",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 2430,
-        "y": 1140,
-        "wires": []
-    },
-    {
-        "id": "de21673871fa5a04",
-        "type": "debug",
-        "z": "992579733deef552",
-        "name": "rs",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 2430,
-        "y": 1220,
-        "wires": []
-    },
-    {
-        "id": "cef079693fd3d7dd",
-        "type": "debug",
-        "z": "992579733deef552",
-        "name": "ll",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 2430,
-        "y": 1340,
-        "wires": []
-    },
-    {
-        "id": "d8efa3ec7f7be7a8",
-        "type": "debug",
-        "z": "992579733deef552",
-        "name": "ben",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 2430,
-        "y": 1420,
-        "wires": []
-    },
-    {
-        "id": "03914ad3bab4a7f7",
-        "type": "debug",
-        "z": "992579733deef552",
-        "name": "mxil",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 2430,
-        "y": 1500,
-        "wires": []
-    },
-    {
-        "id": "93556898afd73a83",
-        "type": "debug",
-        "z": "992579733deef552",
-        "name": "pm25",
-        "active": true,
-        "tosidebar": true,
-        "console": false,
-        "tostatus": false,
-        "complete": "payload",
-        "targetType": "msg",
-        "statusVal": "",
-        "statusType": "auto",
-        "x": 2430,
-        "y": 1580,
-        "wires": []
-    },
-    {
-        "id": "0d39cc8a75bab38d",
-        "type": "link in",
-        "z": "992579733deef552",
-        "name": "link in 1",
-        "links": [
-            "9d0a4182bd6d088d"
-        ],
-        "x": 1995,
-        "y": 1460,
+        "name": "",
+        "splt": "[92,110]",
+        "spltType": "bin",
+        "arraySplt": "60",
+        "arraySpltType": "len",
+        "stream": false,
+        "addname": "",
+        "x": 960,
+        "y": 800,
         "wires": [
             [
-                "86210e338b3c4de8"
+                "50416d3c4c1c9682"
             ]
         ]
     },
     {
-        "id": "2c0fa2120c157574",
+        "id": "50416d3c4c1c9682",
+        "type": "function",
+        "z": "992579733deef552",
+        "name": "function 10",
+        "func": "var station = 168;\nvar msg_0 = { payload: msg.payload[0*station] };\nvar msg_1 = { payload: msg.payload[1 * station] };\nvar msg_2 = { payload: msg.payload[2 * station] };\nvar msg_3 = { payload: msg.payload[3 * station] };\nvar msg_4 = { payload: msg.payload[4 * station] };\nvar msg_5 = { payload: msg.payload[5 * station] };\nvar msg_6 = { payload: msg.payload[6 * station] };\nvar msg_7 = { payload: msg.payload[7 * station] };\n\nreturn [msg_0,msg_1,msg_2,msg_3,msg_4,msg_5,msg_6,msg_7];",
+        "outputs": 8,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1140,
+        "y": 800,
+        "wires": [
+            [
+                "53f8445a35992a68"
+            ],
+            [
+                "3c49ae1eeadb5a0a"
+            ],
+            [],
+            [],
+            [],
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "53f8445a35992a68",
+        "type": "subflow:7ae1632d769de4b2",
+        "z": "992579733deef552",
+        "name": "",
+        "x": 1480,
+        "y": 420,
+        "wires": [
+            [],
+            [
+                "f420b738957fd299"
+            ],
+            [
+                "f2694cb16a0276ab"
+            ],
+            [
+                "d95fc9c10eb340a4"
+            ],
+            [
+                "19d1c40120e630f1"
+            ],
+            [
+                "b0dfc4ab9c35c32e"
+            ],
+            [
+                "a785a5cb5481507f"
+            ],
+            [
+                "aba6456f316cad83"
+            ],
+            [
+                "62100ed446a61873"
+            ],
+            [
+                "7e3fcf8121f0b2a3"
+            ],
+            [
+                "263b091d51fa4a6b"
+            ],
+            [
+                "a6c90854d015af52"
+            ],
+            [
+                "7ffbc94b1620e968"
+            ],
+            [
+                "aa03324c7293ad70"
+            ],
+            [
+                "b92fe81c77ea6bf8"
+            ],
+            [
+                "1d9f05bc928401db",
+                "935be5427f315195"
+            ],
+            [
+                "a611cc4bfd3d4bda"
+            ],
+            [
+                "e236719bb83c8c41"
+            ],
+            [
+                "55d90d791d958b1e"
+            ],
+            [
+                "07f8d37916a923e5"
+            ]
+        ]
+    },
+    {
+        "id": "b0dfc4ab9c35c32e",
+        "type": "debug",
+        "z": "992579733deef552",
+        "name": "debug 11",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1880,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "62100ed446a61873",
+        "type": "debug",
+        "z": "992579733deef552",
+        "name": "debug 12",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1880,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "26ae1ae04f114a64",
         "type": "ui_text",
         "z": "992579733deef552",
         "group": "aefb9377b583a3e0",
@@ -2336,12 +2130,12 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 2440,
-        "y": 140,
+        "x": 1880,
+        "y": 860,
         "wires": []
     },
     {
-        "id": "b18c833297908368",
+        "id": "7cb62a598ccae4f0",
         "type": "ui_text",
         "z": "992579733deef552",
         "group": "aefb9377b583a3e0",
@@ -2353,12 +2147,12 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 2430,
-        "y": 220,
+        "x": 1870,
+        "y": 900,
         "wires": []
     },
     {
-        "id": "18cd16e892516edc",
+        "id": "de0c1ba52485eaa6",
         "type": "ui_text",
         "z": "992579733deef552",
         "group": "aefb9377b583a3e0",
@@ -2370,12 +2164,12 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 2430,
-        "y": 300,
+        "x": 1870,
+        "y": 940,
         "wires": []
     },
     {
-        "id": "11929530fc49924b",
+        "id": "db81770dcbd968be",
         "type": "ui_text",
         "z": "992579733deef552",
         "group": "aefb9377b583a3e0",
@@ -2387,12 +2181,12 @@
         "format": "{{msg.payload}}",
         "layout": "col-center",
         "className": "",
-        "x": 2440,
-        "y": 380,
+        "x": 1880,
+        "y": 980,
         "wires": []
     },
     {
-        "id": "f77c45986aae910b",
+        "id": "167b0cf1cacfd50e",
         "type": "ui_gauge",
         "z": "992579733deef552",
         "name": "",
@@ -2415,12 +2209,12 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 2430,
-        "y": 500,
+        "x": 1870,
+        "y": 1060,
         "wires": []
     },
     {
-        "id": "5e3a6b5571dc7070",
+        "id": "d135e05bc8455d92",
         "type": "ui_gauge",
         "z": "992579733deef552",
         "name": "",
@@ -2443,12 +2237,12 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 2430,
-        "y": 580,
+        "x": 1870,
+        "y": 1100,
         "wires": []
     },
     {
-        "id": "aed48515b2541bde",
+        "id": "33fa9fdfd29ad7fb",
         "type": "ui_gauge",
         "z": "992579733deef552",
         "name": "",
@@ -2471,12 +2265,12 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 2430,
-        "y": 700,
+        "x": 1870,
+        "y": 1180,
         "wires": []
     },
     {
-        "id": "b18adcebae38870f",
+        "id": "8bf3bfc0e9b5281a",
         "type": "ui_gauge",
         "z": "992579733deef552",
         "name": "",
@@ -2499,12 +2293,12 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 2430,
-        "y": 780,
+        "x": 1870,
+        "y": 1220,
         "wires": []
     },
     {
-        "id": "69089728e8d81d1d",
+        "id": "bee82afe5d7d885d",
         "type": "ui_gauge",
         "z": "992579733deef552",
         "name": "",
@@ -2527,12 +2321,12 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 2430,
-        "y": 860,
+        "x": 1870,
+        "y": 1260,
         "wires": []
     },
     {
-        "id": "7710a7a5d7eb24b7",
+        "id": "634053982a479e90",
         "type": "ui_gauge",
         "z": "992579733deef552",
         "name": "",
@@ -2555,12 +2349,12 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 2430,
-        "y": 940,
+        "x": 1870,
+        "y": 1300,
         "wires": []
     },
     {
-        "id": "7e85ff349d8583d8",
+        "id": "6b3207ca25577154",
         "type": "ui_gauge",
         "z": "992579733deef552",
         "name": "",
@@ -2583,12 +2377,12 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 2430,
-        "y": 1020,
+        "x": 1870,
+        "y": 1340,
         "wires": []
     },
     {
-        "id": "a8faa1314712bfda",
+        "id": "630a165de38bc6d3",
         "type": "ui_gauge",
         "z": "992579733deef552",
         "name": "",
@@ -2611,12 +2405,12 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 2430,
-        "y": 1100,
+        "x": 1870,
+        "y": 1380,
         "wires": []
     },
     {
-        "id": "112e5aa3744c5e14",
+        "id": "dfb91f8d002bd6fc",
         "type": "ui_gauge",
         "z": "992579733deef552",
         "name": "",
@@ -2639,12 +2433,12 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 2430,
-        "y": 1180,
+        "x": 1870,
+        "y": 1420,
         "wires": []
     },
     {
-        "id": "621e1137b272a73a",
+        "id": "345b590de7e1a334",
         "type": "ui_chart",
         "z": "992579733deef552",
         "name": "",
@@ -2681,14 +2475,14 @@
         "outputs": 1,
         "useDifferentColor": false,
         "className": "",
-        "x": 2430,
-        "y": 1260,
+        "x": 1870,
+        "y": 1460,
         "wires": [
             []
         ]
     },
     {
-        "id": "e742506583e86e08",
+        "id": "a68c615d996dd4d6",
         "type": "ui_gauge",
         "z": "992579733deef552",
         "name": "",
@@ -2711,12 +2505,12 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 2430,
-        "y": 1300,
+        "x": 1870,
+        "y": 1500,
         "wires": []
     },
     {
-        "id": "2ca1aeedbbe55893",
+        "id": "72f7c49fee4a8533",
         "type": "ui_gauge",
         "z": "992579733deef552",
         "name": "",
@@ -2739,12 +2533,12 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 2430,
-        "y": 1380,
+        "x": 1870,
+        "y": 1540,
         "wires": []
     },
     {
-        "id": "0c4f5fc2b63d92cd",
+        "id": "918a9448d43b6f0c",
         "type": "ui_gauge",
         "z": "992579733deef552",
         "name": "",
@@ -2767,12 +2561,12 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 2430,
-        "y": 1460,
+        "x": 1870,
+        "y": 1580,
         "wires": []
     },
     {
-        "id": "b183db8c9a4f3627",
+        "id": "c2e785dc159ed3e7",
         "type": "ui_gauge",
         "z": "992579733deef552",
         "name": "",
@@ -2795,48 +2589,258 @@
         "seg2": "",
         "diff": false,
         "className": "",
-        "x": 2430,
-        "y": 1540,
+        "x": 1870,
+        "y": 1620,
         "wires": []
     },
     {
-        "id": "aee296a1c28e4fbb",
-        "type": "ui_spacer",
+        "id": "3c49ae1eeadb5a0a",
+        "type": "subflow:7ae1632d769de4b2",
         "z": "992579733deef552",
-        "name": "spacer",
-        "group": "aefb9377b583a3e0",
-        "order": 2,
-        "width": 1,
-        "height": 1
+        "name": "",
+        "x": 1480,
+        "y": 1220,
+        "wires": [
+            [],
+            [
+                "26ae1ae04f114a64"
+            ],
+            [
+                "7cb62a598ccae4f0"
+            ],
+            [
+                "de0c1ba52485eaa6"
+            ],
+            [
+                "db81770dcbd968be"
+            ],
+            [
+                "37ceb069ec498491"
+            ],
+            [
+                "167b0cf1cacfd50e"
+            ],
+            [
+                "d135e05bc8455d92"
+            ],
+            [
+                "f435aec89bd2656a"
+            ],
+            [
+                "33fa9fdfd29ad7fb"
+            ],
+            [
+                "8bf3bfc0e9b5281a"
+            ],
+            [
+                "bee82afe5d7d885d"
+            ],
+            [
+                "634053982a479e90"
+            ],
+            [
+                "6b3207ca25577154"
+            ],
+            [
+                "630a165de38bc6d3"
+            ],
+            [
+                "dfb91f8d002bd6fc",
+                "345b590de7e1a334"
+            ],
+            [
+                "a68c615d996dd4d6"
+            ],
+            [
+                "72f7c49fee4a8533"
+            ],
+            [
+                "918a9448d43b6f0c"
+            ],
+            [
+                "c2e785dc159ed3e7"
+            ]
+        ]
     },
     {
-        "id": "46d9f3d9ce5f567e",
-        "type": "ui_group",
-        "name": "ESTACION1",
-        "tab": "58217e0ae659a8c5",
-        "order": 1,
-        "disp": true,
-        "width": "24",
-        "collapse": false,
-        "className": ""
+        "id": "37ceb069ec498491",
+        "type": "debug",
+        "z": "992579733deef552",
+        "name": "debug 11",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1880,
+        "y": 1020,
+        "wires": []
     },
     {
-        "id": "aefb9377b583a3e0",
-        "type": "ui_group",
-        "name": "ESTACION2",
-        "tab": "58217e0ae659a8c5",
-        "order": 2,
-        "disp": true,
-        "width": "24",
-        "collapse": false,
-        "className": ""
+        "id": "f435aec89bd2656a",
+        "type": "debug",
+        "z": "992579733deef552",
+        "name": "debug 12",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1880,
+        "y": 1140,
+        "wires": []
     },
     {
-        "id": "58217e0ae659a8c5",
-        "type": "ui_tab",
-        "name": "Home",
-        "icon": "dashboard",
-        "disabled": false,
-        "hidden": false
+        "id": "a999253479bed28f",
+        "type": "mqtt in",
+        "z": "2d04c88e95dacfb0",
+        "name": "",
+        "topic": "v3/0011111@ttn/devices/0000000000112233/up",
+        "qos": "2",
+        "datatype": "auto-detect",
+        "broker": "51aab4ca8e0f1c0a",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "x": 240,
+        "y": 120,
+        "wires": [
+            [
+                "51eeb52a8ac22a5f",
+                "f8aab1c80005d21d"
+            ]
+        ]
+    },
+    {
+        "id": "51eeb52a8ac22a5f",
+        "type": "function",
+        "z": "2d04c88e95dacfb0",
+        "name": "function 2",
+        "func": "var gas={payload:msg.payload.uplink_message.decoded_payload.gas};\nvar humidity={payload:msg.payload.uplink_message.decoded_payload.humidity};\nvar pressure={payload:msg.payload.uplink_message.decoded_payload.pressure};\nvar temperature={payload:msg.payload.uplink_message.decoded_payload.temperature};\nvar water={payload:msg.payload.uplink_message.decoded_payload.water};\nreturn [gas,humidity,pressure,temperature,water];\n",
+        "outputs": 5,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 680,
+        "y": 120,
+        "wires": [
+            [
+                "1c92ee7565361b20"
+            ],
+            [
+                "fad6b28451e60a0d"
+            ],
+            [
+                "8171842e931acb0b"
+            ],
+            [
+                "4ba66f996a33cc36"
+            ],
+            [
+                "bad473f4c8cc873b"
+            ]
+        ]
+    },
+    {
+        "id": "1c92ee7565361b20",
+        "type": "debug",
+        "z": "2d04c88e95dacfb0",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 880,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "fad6b28451e60a0d",
+        "type": "debug",
+        "z": "2d04c88e95dacfb0",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 880,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "8171842e931acb0b",
+        "type": "debug",
+        "z": "2d04c88e95dacfb0",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 880,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "4ba66f996a33cc36",
+        "type": "debug",
+        "z": "2d04c88e95dacfb0",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 880,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "bad473f4c8cc873b",
+        "type": "debug",
+        "z": "2d04c88e95dacfb0",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 880,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "f8aab1c80005d21d",
+        "type": "debug",
+        "z": "2d04c88e95dacfb0",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 680,
+        "y": 180,
+        "wires": []
     }
 ]
