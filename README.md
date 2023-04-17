@@ -29,5 +29,6 @@ Del bloque "*Function 5*" sale el "*chorizo*" con los datos ambientales de todas
 ![](https://github.com/Sergiolapria/OpenData_Gijon/blob/b1bc1c30f591eb75893ddfca24736b23aa6e3455/Node-RED%20_%20chopper.png)
 
 en la siguiente figura muestro un mensaje de sálida al azar de la función:
+
 ![](https://github.com/Sergiolapria/OpenData_Gijon/blob/b1bc1c30f591eb75893ddfca24736b23aa6e3455/Node-RED%20_%20Avda_Castilla.png)
 
